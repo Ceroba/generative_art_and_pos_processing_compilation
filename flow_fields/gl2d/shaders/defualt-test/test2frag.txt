@@ -1,0 +1,11 @@
+#version 330 core
+out vec4 fragcolor;
+in vec2 fragCoord;
+void main(){
+			vec2 unfrig = fragCoord * 800;
+    vec2 uv = (unfrig * 2.0 - 800) / 800;
+	float d = length(uv + 1);
+	if (d > 0.024)discard;
+		fragcolor = vec4(1, 0.5, 0, 1.0);
+
+}

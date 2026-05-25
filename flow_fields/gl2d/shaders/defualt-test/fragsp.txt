@@ -1,0 +1,14 @@
+#version 330 core
+out vec4 fragcolor;
+uniform sampler2D texture0;
+in vec2 coord;
+void main(){
+	vec4 coltexture = texture(texture0, coord);
+	if (coltexture.a < 0.1) {
+		discard;
+	}
+	else {
+		
+		fragcolor = coltexture;
+	}
+}

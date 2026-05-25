@@ -1,0 +1,13 @@
+  #version 330 core
+
+//bias: 0.17353355999581582 ( very probably the best of its kind )
+
+in vec2 coord;
+in vec2 uv;
+out vec4 O;
+in float h;
+void main()
+{
+
+    O = vec4( h, h, h, 1.0 );
+}
